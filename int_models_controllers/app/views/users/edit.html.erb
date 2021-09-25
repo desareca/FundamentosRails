@@ -1,0 +1,10 @@
+<h1>Editar Usuario</h1>
+
+<%= form_for @us_id, url: {action: "create"}, html: {class: "nifty_form"}, method: "get" do |u| %>
+    <%= u.label :first_name %><br>
+    <%= u.text_field :first_name %><br>
+    <%= u.label :last_name %><br>
+    <%= u.text_field :last_name %><br><br>
+<% end %>
+
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><% title "Edit " + @dojo.sucursal %></title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="row mt-5 mb-3 mx-0">Editing <%= @dojo.sucursal %></h1>
+        <div class="row mb-3">
+            <div class="col-3 border border-dark p-4">
+                <form action="/dojos/<%=@dojo.id.to_s%>" method="post"> 
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                    <div class="form-group row">
+                        <label for="branch" class="col-sm-4 col-form-label">Branch:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="edit_branch" placeholder=<%= @dojo.sucursal %> name="data[sucursal]">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="street" class="col-sm-4 col-form-label">Street:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="edit_street" placeholder=<%= @dojo.calle %> name="data[calle]">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="city" class="col-sm-4 col-form-label">City:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="edit_city" placeholder=<%= @dojo.ciudad %> name="data[ciudad]">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="state" class="col-sm-4 col-form-label">State:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="edit_state" placeholder=<%= @dojo.estado %> name="data[estado]">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <%= button_to "Update", "/dojos/" +  @dojo.id.to_s, class:"col-sm-5 offset-6"%>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <tr class="col-3">
+            <td><%= link_to "Home ", "/dojos/"%> | <%= link_to " Show","/dojos/" + @dojo.id.to_s %></td>
+        </tr>
+    </div>
+</body>
+</html>

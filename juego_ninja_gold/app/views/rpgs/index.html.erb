@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="row my-4">
+        <h6 class="col">Your Gold:  <span class="ml-1 pl-1 pr-5 py-1  border border-secondary"><%= @gold %></span></h6>
+    </div>
+    <div class="row justify-content-center">
+        <%# farm %>
+        <form class="col border border-secondary px-1 mr-3" action="/process" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <h2 class="row justify-content-center">Farm</h2>
+            <h6 class="row justify-content-center">(earns 10-20 golds)</h6>
+            <div class="form-group row justify-content-center mt-5">
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-success float-center" value="farm" name="data[box]">Find Gold!</button>
+                </div>
+            </div>
+        </form>
+        <%# cave %>
+        <form class="col border border-secondary px-1 mx-3" action="/process" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <h2 class="row justify-content-center">Cave</h2>
+            <h6 class="row justify-content-center">(earns 5-10 golds)</h6>
+            <div class="form-group row justify-content-center mt-5">
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-danger float-center" value="cave" name="data[box]">Find Gold!</button>
+                </div>
+            </div>
+        </form>
+        <%# house %>
+        <form class="col border border-secondary px-1 mx-3" action="/process" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <h2 class="row justify-content-center">House</h2>
+            <h6 class="row justify-content-center">(earns 2-5 golds)</h6>
+            <div class="form-group row justify-content-center mt-5">
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-warning float-center" value="house" name="data[box]">Find Gold!</button>
+                </div>
+            </div>
+        </form>
+        <%# casino %>
+        <form class="col border border-secondary px-1 ml-3" action="/process" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <h2 class="row justify-content-center">Casino</h2>
+            <h6 class="row justify-content-center">(earns/takes 0-50 golds)</h6>
+            <div class="form-group row justify-content-center mt-5">
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-info float-center" value="casino" name="data[box]">Find Gold!</button>
+                </div>
+            </div>
+        </form>    
+    </div>
+    <%# log %>
+    <div class="row mt-4 mb-1">
+        <h6 class="col">Activities:</h6>
+    </div>
+    <div class="row border border-secondary p-2" style="height : 200px; overflow : auto; ">
+        <%= @content.html_safe %>
+    </div>
+    <%# reinit %>
+    <form class="col mt-2" action="/process" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div class="row form-group">
+            <div class="col">
+                <button type="submit" class="btn btn-secondary float-left" value="reinit" name="data[box]">Restart!</button>
+            </div>
+        </div>
+    </form>    
+
+
+</div>

@@ -1,0 +1,17 @@
++----+------------------------------+------------------------------------------------------------+---------+-------------------------+-------------------------+
+| id | title                        | content                                                    | blog_id | created_at              | updated_at              |
++----+------------------------------+------------------------------------------------------------+---------+-------------------------+-------------------------+
+| 1  | Lenguajes de Programacion    | Lorem Ipsum is simply dummy text of the printing and ty... | 1       | 2021-07-21 02:25:16 UTC | 2021-07-21 02:25:16 UTC |
+| 2  | FrameWorks JS                | Lorem Ipsum is simply dummy text of the printing and ty... | 1       | 2021-07-21 02:25:26 UTC | 2021-07-21 02:25:26 UTC |
+| 3  | Full Stack Development       | Lorem Ipsum is simply dummy text of the printing and ty... | 1       | 2021-07-21 02:25:36 UTC | 2021-07-21 02:25:36 UTC |
+| 4  | Programación en Ruby I       | Lorem Ipsum is simply dummy text of the printing and ty... | 2       | 2021-07-21 02:38:03 UTC | 2021-07-21 02:38:03 UTC |
+| 5  | Programación en Ruby & Rails | Lorem Ipsum is simply dummy text of the printing and ty... | 2       | 2021-07-21 02:38:10 UTC | 2021-07-21 02:38:10 UTC |
+| 6  | Rails Development            | Lorem Ipsum is simply dummy text of the printing and ty... | 2       | 2021-07-21 02:38:18 UTC | 2021-07-21 02:38:18 UTC |
+| 7  | Programación en Python       | Lorem Ipsum is simply dummy text of the printing and ty... | 3       | 2021-07-21 03:04:20 UTC | 2021-07-21 03:04:20 UTC |
+| 8  | Introducción a Python/Djamgo | Lorem Ipsum is simply dummy text of the printing and ty... | 3       | 2021-07-21 03:04:28 UTC | 2021-07-21 03:04:28 UTC |
+| 9  | Desarrollo con Django        | Lorem Ipsum is simply dummy text of the printing and ty... | 3       | 2021-07-21 03:04:34 UTC | 2021-07-21 03:04:34 UTC |
+| 10 | Fundamentos de Javascript    | Lorem Ipsum is simply dummy text of the printing and ty... | 4       | 2021-07-21 03:09:39 UTC | 2021-07-21 03:09:39 UTC |
+| 11 | Introducción a JQuery        | Lorem Ipsum is simply dummy text of the printing and ty... | 4       | 2021-07-21 03:09:49 UTC | 2021-07-21 03:09:49 UTC |
+| 12 | API & AJAX                   | Lorem Ipsum is simply dummy text of the printing and ty... | 4       | 2021-07-21 03:09:56 UTC | 2021-07-21 03:09:56 UTC |
++----+------------------------------+------------------------------------------------------------+---------+-------------------------+-------------------------+
+12 rows in set

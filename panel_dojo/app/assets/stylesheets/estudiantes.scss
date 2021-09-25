@@ -1,0 +1,23 @@
+// Place all the styles related to the Estudiantes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.btn-link:link,
+.btn-link:visited,
+.text-dark,
+.link_new {
+    color: black !important;
+}
+
+.btn-link:hover,
+.btn-link:active,
+.link_new {
+    color: rgb(255, 97, 97) !important;
+}
+
+.button_to {
+    display: inline-flex;
+}
+
+.btn-link {
+    padding: 0px;
+}

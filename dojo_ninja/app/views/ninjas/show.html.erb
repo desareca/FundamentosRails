@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @ninja.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @ninja.last_name %>
+</p>
+
+<p>
+  <strong>Dojo:</strong>
+  <%= @ninja.dojo_id_id %>
+</p>
+
+<%= link_to 'Edit', edit_ninja_path(@ninja) %> |
+<%= link_to 'Back', ninjas_path %>

@@ -1,0 +1,10 @@
+<div class='container'>
+    <div class='row justify-content-center mt-3'>
+    <h6 class='col-3 my-3 mx-2 mb-4'>The current time and date:</h6>
+    </div>
+
+    <div class='row time mt-5 pt-3 px-5'>
+        <p><%= I18n.l(Date.today, format: '%A, %d de %B de %Y')  %></p>
+        <p><%= Time.now.strftime("%H:%M:%S %p") %></p>
+    </div>
+</div>

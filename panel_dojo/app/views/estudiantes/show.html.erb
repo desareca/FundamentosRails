@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><% title @estudiante.nombre + " - " + @estudiante.apellido  %></title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5 mb-3">
+            <h1 class="d-inline-block ml-0 mr-2"><%= @dojo.sucursal + " " + @estudiante.nombre + " " + @estudiante.apellido %></h1>
+        </div>
+        <div class="row mb-3">
+            <div class="col-3 py-4">
+                <p>Email: <%= @estudiante.email %></p>
+            </div>
+        </div>
+
+        <h3 class="row mt-1 mb-3 mx-0">Cohort</h3>
+        <table class="table table-striped table-bordered table-condensed mb-2">
+            <tr>
+                <th>"First Name"</th>
+                <th>"Last Name"</th>
+                <th>"Email"</th>
+            </tr>
+            <tr>
+                <td><%= @estudiante.nombre %></td>
+                <td><%= @estudiante.apellido %></td>
+                <td><%= @estudiante.email %></td>
+            </tr>
+        </table>
+
+        <tr class="col-3">
+            <td><%= link_to "Home ", "/dojos/"%> | <%= link_to " Edit","/dojos/" + @dojo.id.to_s + "/estudiantes/" +  @estudiante.id.to_s + "/edit"%></td>
+        </tr>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<%= form_with(model: ninja, local: true) do |form| %>
+  <% if ninja.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ninja.errors.count, "error") %> prohibited this ninja from being saved:</h2>
+
+      <ul>
+        <% ninja.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dojo_id_id %>
+    <%= form.text_field :dojo_id_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

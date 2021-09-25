@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><% title "Editing " + @estudiante.nombre + " " + @estudiante.apellido %></title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="row mt-5 mb-3 mx-0"><%= "Editing " + @estudiante.nombre + " " + @estudiante.apellido %></h1>
+        <div class="row mb-3">
+            <div class="col-3 border border-dark p-4">
+                <form action="/dojos/<%=@dojo.id.to_s%>/estudiantes/<%=@estudiante.id.to_s%>" method="post"> 
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                    <div class="form-group row">
+                        <label for="branch" class="col-sm-4 col-form-label">First name:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="edit_nombre" placeholder=<%= @estudiante.nombre %> name="nombre">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="street" class="col-sm-4 col-form-label">Last name:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="edit_apellido" placeholder=<%= @estudiante.apellido %> name="apellido">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="city" class="col-sm-4 col-form-label">Email:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="edit_email" placeholder=<%= @estudiante.email %> name="email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="state" class="col-sm-4 col-form-label">Dojo:</label>
+                        <div class="col-sm-8">
+                            <select class="form-control" id="sel_edit_dojo" name="dojo">
+                                <% @dojos.each do |d| %>
+                                <option value=<%= d.id %>><%= d.sucursal %></option>
+                                <% end %>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <%= button_to "Update", "/dojos/" +  @dojo.id.to_s + "/estudiantes/" + @estudiante.id.to_s , class:"col-sm-5 offset-6"%>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <tr class="col-3">
+            <td><%= link_to "Home ", "/dojos/"%> | <%= link_to " "+ @estudiante.nombre,"/dojos/" + @dojo.id.to_s + "/estudiantes/" + @dojo.id.to_s%></td>
+        </tr>
+    </div>
+</body>
+</html>

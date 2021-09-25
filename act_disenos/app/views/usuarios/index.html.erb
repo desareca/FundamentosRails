@@ -1,0 +1,45 @@
+<% content_for :left_column do %>
+    <h1>All Users</h1>
+    <table class="table table-striped table-bordered table-condensed mb-2">
+    <thead>
+        <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Favorite Language</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @usuarios.each do |usuario| %>
+        <tr>
+            <td><%= usuario.nombre %></td>
+            <td><%= usuario.apellido %></td>
+            <td><%= usuario.lenguaje_favorito %></td>
+        </tr>
+        <% end %>
+    </tbody>
+    </table>
+
+<% end %>
+
+<% content_for :rigth_column do %>
+    <h1>New User</h1>
+    <%= form_for @usuario do |f| %>
+        <div class="form-group row">
+            <%= f.label 'First Name: ', class:"col-sm-12 col-form-label p-0"%>
+            <%= f.text_field :nombre, class:"col-sm-12 form-control" %><br/>
+        </div>
+        <div class="form-group row">
+            <%= f.label 'Last Name: ', class:"col-sm-12 col-form-label p-0"%>
+            <%= f.text_field :apellido, class:"col-sm-12 form-control" %><br/>
+        </div>
+        <div class="form-group row">
+            <%= f.label 'Favorite Language: ', class:"col-sm-12 col-form-label p-0"%>
+            <%= f.text_field :lenguaje_favorito, class:"col-sm-12 form-control" %><br/>
+        </div>
+        <div class="form-group row">
+            <%= f.submit 'Submit', class:"btn btn-primary"%>
+        </div>
+    <% end %>
+    <%= link_to "<button class='btn btn-info'>All Posts</button>".html_safe, '/publicacions', class:"row" %>
+<% end %>

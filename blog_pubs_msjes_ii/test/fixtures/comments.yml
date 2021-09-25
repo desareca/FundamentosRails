@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content_comm: MyString
+  comm: one
+  comm_type: Comm
+
+two:
+  content_comm: MyString
+  comm: two
+  comm_type: Comm
